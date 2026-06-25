@@ -1,0 +1,159 @@
+{
+  "data": {
+    "n_events": 300000,
+    "duration_hours": 8.34,
+    "n_buckets": 30015,
+    "bucket_seconds": 1.0,
+    "median_spread_ticks": 1.0,
+    "mean_best_depth": 13.1,
+    "trade_fraction": 0.321
+  },
+  "price_impact": {
+    "beta": 0.00031752283120612795,
+    "tstat": 131.84257287455554,
+    "r2": 0.5304683991378578,
+    "n": 30014
+  },
+  "multilevel": {
+    "r2_single": 0.5304683991378578,
+    "r2_multi": 0.8808087003579261,
+    "betas_multi": [
+      5.615969823557982e-05,
+      3.1151328312148396e-05,
+      2.6499083325566422e-05,
+      4.132688354884232e-05,
+      0.00011041086471250186
+    ],
+    "n": 30014
+  },
+  "forecast_decay": [
+    {
+      "horizon": 1,
+      "beta": 7.923909979421527e-05,
+      "tstat": 34.69858609569849,
+      "r2": 0.033034979993888935,
+      "ic": 0.18175527500980176,
+      "n": 30014
+    },
+    {
+      "horizon": 2,
+      "beta": 0.0001422513103137391,
+      "tstat": 39.702706167434606,
+      "r2": 0.050434060497961286,
+      "ic": 0.22457528915257088,
+      "n": 30013
+    },
+    {
+      "horizon": 3,
+      "beta": 0.00020272835953361005,
+      "tstat": 42.44908491606478,
+      "r2": 0.06422544492871896,
+      "ic": 0.2534273957738561,
+      "n": 30012
+    },
+    {
+      "horizon": 5,
+      "beta": 0.0003147745549323017,
+      "tstat": 44.88857008309161,
+      "r2": 0.08227008446191098,
+      "ic": 0.286827621511443,
+      "n": 30010
+    },
+    {
+      "horizon": 10,
+      "beta": 0.0005425830852728934,
+      "tstat": 43.12980761126599,
+      "r2": 0.09487311062710535,
+      "ic": 0.30801478962398093,
+      "n": 30005
+    }
+  ],
+  "out_of_sample": {
+    "beta_train": 7.800518796123843e-05,
+    "r2_in_sample": 0.03199599924201757,
+    "r2_out_sample": 0.034785096748161326,
+    "ic_in_sample": 0.17887425539193091,
+    "ic_out_sample": 0.18766399576054807,
+    "n_train": 21009,
+    "n_test": 9005,
+    "cut_time_h": 5.835842329092896
+  },
+  "costs": {
+    "price": 98.7924383620977,
+    "tick": 0.01,
+    "half_spread": 0.007465794877030678,
+    "half_spread_ticks": 0.7465794877030677,
+    "taker_fee": 0.0049396219181048855,
+    "round_trip_cost": 0.024810833590271128,
+    "round_trip_cost_ticks": 2.481083359027113,
+    "mean_abs_edge": 0.0008655305006236531,
+    "mean_abs_edge_ticks": 0.08655305006236531,
+    "edge_to_cost_ratio": 0.034885184227064686,
+    "frac_buckets_tradeable_as_taker": 0.0,
+    "maker_capture_per_rt": 0.014931589754061355,
+    "maker_capture_per_rt_ticks": 1.4931589754061354
+  },
+  "taker_backtest": {
+    "naive": {
+      "total_gross": 10.519999999999044,
+      "total_net": -79.18539559225408,
+      "gross_per_trade_ticks": 0.2917359955629241,
+      "net_per_trade_ticks": -2.195934431288244,
+      "sharpe_gross": 1074.8719704953323,
+      "sharpe_net": -3208.9609787085915,
+      "max_drawdown_net": 79.18471384674537,
+      "n_trades": 3606,
+      "turnover_per_bucket": 0.8007773459189339,
+      "pct_time_in_market": 1.0,
+      "hit_rate": 0.3247084952803998,
+      "policy": "naive",
+      "alpha": -5.791901231982718e-05,
+      "beta": 7.800518796123492e-05
+    },
+    "selective": {
+      "total_gross": 0.0,
+      "total_net": 0.0,
+      "gross_per_trade_ticks": 0.0,
+      "net_per_trade_ticks": 0.0,
+      "sharpe_gross": 0.0,
+      "sharpe_net": 0.0,
+      "max_drawdown_net": 0.0,
+      "n_trades": 0,
+      "turnover_per_bucket": 0.0,
+      "pct_time_in_market": 0.0,
+      "hit_rate": 0.0,
+      "policy": "selective",
+      "alpha": -5.791901231982718e-05,
+      "beta": 7.800518796123492e-05
+    }
+  },
+  "market_maker": {
+    "naive": {
+      "policy": "naive",
+      "final_pnl": 128.13807097935114,
+      "pnl_sharpe": 43.6680469731812,
+      "inv_abs_mean": 73.45590244227502,
+      "inv_abs_max": 173.0,
+      "n_fills": 20094,
+      "markout_per_fill": 0.0058934543136940475
+    },
+    "as": {
+      "policy": "as",
+      "final_pnl": 17.626835399921106,
+      "pnl_sharpe": 120.13057318897756,
+      "inv_abs_mean": 3.6705094459067737,
+      "inv_abs_max": 16.0,
+      "n_fills": 20102,
+      "markout_per_fill": 0.005827372171919182
+    },
+    "as_ofi": {
+      "policy": "as_ofi",
+      "final_pnl": 109.87675277728749,
+      "pnl_sharpe": 839.1568746656463,
+      "inv_abs_mean": 2.9661813214273813,
+      "inv_abs_max": 15.0,
+      "n_fills": 21358,
+      "markout_per_fill": 0.0028774582253621203
+    }
+  }
+}
